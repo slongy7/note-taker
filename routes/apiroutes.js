@@ -10,7 +10,7 @@ module.exports = app => {
     //     const notes = JSON.parse(data);
 
         
-        app.get('./api/notes', function(req, res) {
+        app.get('/api/notes', function(req, res) {
             fs.readFile('./db/db.json', (err, data) => {
                     console.log('in the routes')
                     if (err) throw err;
@@ -18,7 +18,7 @@ module.exports = app => {
         });
     })
 
-        app.post('./api/notes', function(req, res) {
+        app.post('/api/notes', function(req, res) {
             fs.readFile('./db/db.json', (err, data) => {
                 console.log('in the routes')
                 if (err) throw err;
