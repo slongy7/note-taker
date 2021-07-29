@@ -14,6 +14,7 @@ module.exports = app => {
             fs.readFile('./db/db.json', (err, data) => {
                     console.log('in the routes')
                     if (err) throw err;
+                    console.log(data);
             res.send(data);
         });
     })
